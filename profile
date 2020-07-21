@@ -36,5 +36,5 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-sh /home/wrightway/utilities/first-boot.sh
+
 xinit kodi $* -- :1
