@@ -19,9 +19,8 @@ d-i console-setup/layoutcode string us
 
 # Keyboard selection.
 d-i console-setup/ask_detect boolean false
-d-i keyboard-configuration/xkb-keymap select us
-d-i keyboard-configuration/layoutcode string us
-d-i keyboard-configuration/variantcode string
+d-i keyboard-configuration/xkb-keymap skip-config
+
 # d-i keyboard-configuration/toggle select No toggling
 
 ### Network configuration
@@ -279,6 +278,7 @@ d-i partman/confirm_nooverwrite boolean true
 # For additional information see the file partman-auto-raid-recipe.txt
 # included in the 'debian-installer' package or available from D-I source
 # repository.
+
 
 # This makes partman automatically partition without confirmation.
 d-i partman-md/confirm boolean true
