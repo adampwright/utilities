@@ -440,4 +440,5 @@ in-target cp /home/wrightway/utilities/profile /etc/profile ; \
 in-target mkdir -p /etc/systemd/system/getty@.service.d/ && touch /etc/systemd/system/getty@.service.d/override.conf ; \
 in-target cp /home/wrightway/utilities/override.conf /etc/systemd/system/getty@.service.d/override.conf ; \
 in-target cp /home/wrightway/utilities/profile /etc/profile ; \
-in-target cp /home/wrightway/utilities/grub /etc/default/grub
+in-target cp /home/wrightway/utilities/grub /etc/default/grub ; \
+in-target update-grub
