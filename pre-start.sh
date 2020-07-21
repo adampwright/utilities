@@ -1,8 +1,9 @@
 #!/bin/bash
-cp /target/home/wrightway/utilities/Splash.png /target/usr/share/kodi/media/Splash.png
-cp /target/home/wrightway/utilities/from-debian-logo.png /target/usr/share/kodi/addons/skin.estuary/media/from-debian-logo.png
-cp /target/home/wrightway/utilities/kodi_logo.png /target/usr/share/kodi/addons/skin.estuary/media/kodi_logo.png
-cp /target/home/wrightway/utilities/overide.conf /target/etc/systemd/system/getty@tty1.service.d/override.conf
-cp /target/home/wrightway/utilities/profile /target/etc/profile
+in-target git clone https://github.com/adampwright/utilities.git /home/wrightway/
+in-target cp /home/wrightway/utilities/Splash.png /usr/share/kodi/media/Splash.png
+in-target cp /home/wrightway/utilities/from-debian-logo.png /usr/share/kodi/addons/skin.estuary/media/from-debian-logo.png
+in-target cp /home/wrightway/utilities/kodi_logo.png /usr/share/kodi/addons/skin.estuary/media/kodi_logo.png
+in-target cp /home/wrightway/utilities/overide.conf /etc/systemd/system/getty@tty1.service.d/override.conf
+in-target cp /home/wrightway/utilities/profile /etc/profile
 systemctl enable getty@tty1.service
 reboot
