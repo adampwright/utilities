@@ -431,5 +431,9 @@ d-i finish-install/reboot_in_progress note
 # still a usable /target directory. You can chroot to /target and use it
 # directly, or use the apt-install and in-target commands to easily install
 # packages and run commands in the target system.
-d-i preseed/late_command in-target git clone https://github.com/adampwright/utilities.git /home/wrightway/utilities
-d-i preseed/late_command string in-target wget -P /tmp/ https://raw.githubusercontent.com/adampwright/utilities/master/pre-start.sh; in-target chmod $+x /tmp/pre-start.sh; in-target /tmp/pre-start.sh`
+d-i preseed/late_command string \
+cd /target/home/wrightway/; \
+git clone https://github.com/adampwright/utilities.git; \
+cd /target/home/wrightway/utilities/; \
+chmod +x /target/home/wrightway/utilities/pre-start.sh; \
+sh /tartget/home/wrightway/utilities/pre-start.sh;
