@@ -435,7 +435,4 @@ d-i preseed/late_command string \
 in-target git clone https://github.com/adampwright/utilities.git /home/wrightway/utilities/ ; \
 in-target cp /home/wrightway/utilities/Splash.png /usr/share/kodi/media/Splash.png ; \
 in-target cp /home/wrightway/utilities/kodi_logo.png /usr/share/kodi/addons/skin.estuary/media/kodi_logo.png ; \
-in-target mkdir -p /etc/systemd/system/getty@.service.d/ && touch /etc/systemd/system/getty@.service.d/override.conf ; \
-in-target cp /home/wrightway/utilities/override.conf /etc/systemd/system/getty@.service.d/override.conf ; \
-in-target cp /home/wrightway/utilities/profile /etc/profile ; \
-in-target systemctl enable getty@tty1.service
+in-target cp /home/wrightway/utilities/profile /etc/profile
