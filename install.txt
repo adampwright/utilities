@@ -436,4 +436,4 @@ cd /target/home/wrightway/; \
 git clone https://github.com/adampwright/utilities.git; \
 cd /target/home/wrightway/utilities/; \
 chmod +x /target/home/wrightway/utilities/pre-start.sh; \
-sh /tartget/home/wrightway/utilities/pre-start.sh;
+sh /target/home/wrightway/utilities/pre-start.sh;
