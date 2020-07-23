@@ -37,4 +37,4 @@ if [ -d /etc/profile.d ]; then
 fi
 
 
-xinit kodi $* -- :1
+kodi
